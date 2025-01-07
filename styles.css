@@ -1,0 +1,28 @@
+::backdrop {
+  background-color: #09090b;
+  opacity: 0.8;
+}
+
+#close-btn {
+  background-color: red;
+  border: solid 1px red;
+  border-radius: 3px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+#read {
+  align-self: flex-start;
+  margin:0
+}
+
+label {
+  margin: 5px 0;
+}
+
+#submit-btn {
+  margin: 5px 0;
+}

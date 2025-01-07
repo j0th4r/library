@@ -9,18 +9,26 @@
 <body>
   <button id="new-book-btn">New Book</button>
   <dialog>
-    <button id="close-btn">X</button>
     <form id="new-book-form">
-      <label for="author">Author</label>
-      <input type="text" name="author" id="author">
-      <label for="title">Title</label> 
-      <input type="text" name="title" id="title">
-      <label for="pages">Pages</label>
-      <input type="number" name="pages" id="pages">
-      <label for="read">Read</label>
-      <input type="checkbox" name="read" id="read">
-      <button id="submit-btn">Submit</button>
+      <label for="author">Author: 
+        <input type="text" name="author" id="author">
+      </label>
+      <label for="title">Title: 
+        <input type="text" name="title" id="title">
+      </label> 
+      <label for="pages">Pages: 
+        <input type="number" name="pages" id="pages">
+      </label>
+      <label for="read">
+        Have you read this book?
+        <input type="checkbox" name="read" id="read">
+      </label>
+      <div class="btns">
+        <button id="submit-btn">Submit</button>
+        <button id="close-btn">Cancel</button>
+      </div>
     </form>
+    
   </dialog>
   <div id="book-list"></div>
 <script src="index.js"></script>

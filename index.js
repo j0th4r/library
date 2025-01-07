@@ -38,14 +38,13 @@ function render() {
     bookEl.innerHTML = `
       <div class="card-header">
         <h3 class="title">${book.title}</h3>
-        <h5 class="author">Author: ${book.author}</h5>
+        <h5 class="author">${book.author}</h5>
       </div>
       <div class="card-body">
-        <p>Pages: ${book.pages}</p>
-        <p class="read-status">${book.read ? "Read" : "Not Read"}</p>
-        <button class="remove-btn" onClick="removeBook(${i})">Delete</button>
-        <button class="read-btn" onClick="toggleRead(${i})">Toggle Read</button>
+        <p>${book.pages} pages</p>
+        <button class="read-btn" onClick="toggleRead(${i})">${book.read ? "Read" : "Not Read"}</button>
       </div>
+      <button class="remove-btn" onClick="removeBook(${i})">Remove</button>
     `;
     bookList.appendChild(bookEl);
   }
@@ -64,7 +63,8 @@ document.querySelector("#new-book-btn").addEventListener("click", () => {
   dialog.showModal();
 });
 
-document.querySelector("#close-btn").addEventListener("click", () => {
+document.querySelector("#close-btn").addEventListener("click", (e) => {
+  event.preventDefault();
   dialog.close();
 });
 

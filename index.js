@@ -44,6 +44,7 @@ function render() {
         <p>${book.pages} pages</p>
         <button class="read-btn" onClick="toggleRead(${i})">${book.read ? "Read" : "Not Read"}</button>
       </div>
+      <hr>
       <button class="remove-btn" onClick="removeBook(${i})">Remove</button>
     `;
     bookList.appendChild(bookEl);
